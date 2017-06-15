@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Libraries for  NLP
+export DEBIAN_FRONTEND=noninteractive && \
+      apt-get update && \
+      apt-get install -y \
+      python$tag-numpy  && \
+      apt-get clean && \
+      chown -R root:root $HOME && \
+      pip$tag install --user -r /tmp/nltk/requirements.txt && \
+      chown -R sandbox:sandbox $HOME && \
+      rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

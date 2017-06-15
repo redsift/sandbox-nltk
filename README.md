@@ -1,2 +1,1 @@
-# sandbox-nltk
-NLTK sandbox
+# sandbox-scipy
