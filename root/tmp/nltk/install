@@ -8,6 +8,6 @@ export DEBIAN_FRONTEND=noninteractive && \
       apt-get clean && \
       chown -R root:root $HOME && \
       pip$tag install --user -r /tmp/nltk/requirements.txt && \
-      python -c "import nltk; nltk.download('stopwords')" \
+      python$tag -c "import nltk; nltk.download('stopwords')" \
       chown -R sandbox:sandbox $HOME && \
       rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
